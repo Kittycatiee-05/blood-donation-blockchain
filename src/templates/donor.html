@@ -1,11 +1,91 @@
-{% extends "base.html" %}
-{% block content %}
-<h1>Donor Dashboard</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Donor Dashboard</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #b31217, #e52d27);
+    color: white;
+    display: flex;
+}
 
-<div class="card-grid">
-<div class="glass-card">🧾 My Donations</div>
-<div class="glass-card">🩸 Donate Blood</div>
-<div class="glass-card">📍 Nearby Blood Banks</div>
+.sidebar {
+    width: 240px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px;
+    margin-bottom: 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+.content {
+    flex: 1;
+    padding: 35px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>🩸 Donor</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">My Donations</a>
+    <a href="#">Donate Blood</a>
+    <a href="#">Nearby Banks</a>
+    <a href="/logout">Logout</a>
 </div>
-{% endblock %}
+
+<div class="content">
+    <h1>Welcome Donor</h1>
+
+    <div class="card-grid">
+        <div class="card">🧾 My Donations</div>
+        <div class="card">🩸 Donate Blood</div>
+        <div class="card">📍 Nearby Blood Banks</div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,13 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Health Authority</title>
-</head>
-<body style="font-family:Arial; background:#f1fff5;">
+<meta charset="UTF-8">
+<title>Health Authority Dashboard</title>
 
-<h2>Health Authority Dashboard</h2>
-<p>Verified Blood Records Stored in Government Database</p>
-<a href="/logout">Logout</a>
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    color: white;
+    display: flex;
+}
+
+.sidebar {
+    width: 240px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px;
+    margin-bottom: 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+.content {
+    flex: 1;
+    padding: 35px;
+}
+
+.card {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>🏛 Health</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Verified Records</a>
+    <a href="#">Blockchain Logs</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<div class="content">
+    <h1>Health Authority Dashboard</h1>
+
+    <div class="card">
+        <h3>Verified Blood Records</h3>
+        <p>
+            All blood donation and transfusion records are verified and 
+            securely stored using blockchain technology to ensure 
+            transparency, authenticity, and tamper-proof tracking.
+        </p>
+    </div>
+</div>
 
 </body>
 </html>

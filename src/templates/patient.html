@@ -1,13 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Patient</title>
-</head>
-<body style="font-family:Arial; background:#fdf7ff;">
+<meta charset="UTF-8">
+<title>Patient Dashboard</title>
 
-<h2>Patient Dashboard</h2>
-<p>Available Blood Units</p>
-<a href="/logout">Logout</a>
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    color: white;
+    display: flex;
+}
+
+.sidebar {
+    width: 240px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px;
+    margin-bottom: 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+.content {
+    flex: 1;
+    padding: 35px;
+}
+
+.card {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>🧑‍⚕️ Patient</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Available Blood</a>
+    <a href="#">Request Blood</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<div class="content">
+    <h1>Patient Dashboard</h1>
+
+    <div class="card">
+        <h3>Available Blood Units</h3>
+        <table>
+            <tr>
+                <th>Blood Group</th>
+                <th>Units</th>
+                <th>Hospital</th>
+            </tr>
+            <tr>
+                <td>A+</td>
+                <td>12</td>
+                <td>City Hospital</td>
+            </tr>
+            <tr>
+                <td>O+</td>
+                <td>8</td>
+                <td>Government Medical</td>
+            </tr>
+        </table>
+    </div>
+</div>
 
 </body>
 </html>

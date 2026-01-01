@@ -1,24 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Lab Authority</title>
+<meta charset="UTF-8">
+<title>Lab Authority Dashboard</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1d4350, #a43931);
+    color: white;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px;
+    margin-bottom: 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+/* Content */
+.content {
+    flex: 1;
+    padding: 35px;
+}
+
+.card {
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 450px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 12px 25px;
+    background: #00ffcc;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+</style>
 </head>
-<body style="font-family:Arial; background:#f0f7ff;">
 
-<h2>Lab Dashboard</h2>
+<body>
 
-<h3>Test Request</h3>
-<form>
-    Donor ID:<br><input type="text"><br>
-    Result:
-    <select>
-        <option>Pass</option>
-        <option>Fail</option>
-    </select><br><br>
-    <button>Send Result</button>
-</form>
-<a href="/logout">Logout</a>
+<div class="sidebar">
+    <h2>🧪 Lab</h2>
+    <a href="#">Test Requests</a>
+    <a href="#">Results</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<div class="content">
+    <h1>Lab Dashboard</h1>
+
+    <div class="card">
+        <h3>Blood Test Result</h3>
+        <form>
+            <input type="text" placeholder="Donor ID" required>
+
+            <select>
+                <option>Pass</option>
+                <option>Fail</option>
+            </select>
+
+            <button>Send Result</button>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
-

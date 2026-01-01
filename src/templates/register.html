@@ -1,40 +1,90 @@
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Register</title>
+<meta charset="UTF-8">
+<title>User Registration</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #232526, #414345);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 20px;
+    width: 380px;
+    color: white;
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ff4b2b;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.link {
+    text-align: center;
+    margin-top: 15px;
+}
+</style>
 </head>
-<body style="font-family: Arial; background:#f4f6f8;">
 
-<h2 style="text-align:center;">User Registration</h2>
+<body>
 
-<form method="post" action="/register"
-      style="width:300px; margin:auto; padding:20px; background:white; border-radius:8px;">
+<div class="card">
+    <h2>🩸 User Registration</h2>
 
-  <label>Username</label><br>
-  <input type="text" name="username" placeholder="Enter username" required><br><br>
+    <form method="post" action="/register">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
 
-  <label>Password</label><br>
-  <input type="password" name="password" placeholder="Enter password" required><br><br>
+        <select name="role" required>
+            <option value="">Select Role</option>
+            <option value="donor">Donor</option>
+            <option value="hospital">Hospital</option>
+            <option value="lab">Lab Authority</option>
+            <option value="bloodbank">Blood Bank</option>
+            <option value="health">Health Authority</option>
+            <option value="patient">Patient</option>
+        </select>
 
-  <label>Role</label><br>
-  <select name="role" required>
-    <option value="">-- Select Role --</option>
-    <option value="donor">Donor</option>
-    <option value="hospital">Hospital</option>
-    <option value="lab">Lab Authority</option>
-    <option value="bloodbank">Blood Bank</option>
-    <option value="health">Health Authority</option>
-    <option value="patient">Patient</option>
-  </select><br><br>
+        <button type="submit">Register</button>
+    </form>
 
-  <button type="submit" style="width:100%; padding:8px; background:#007bff; color:white; border:none;">
-    Register
-  </button>
-</form>
-
-<p style="text-align:center;">
-  Already registered? <a href="/login">Login</a>
-</p>
+    <div class="link">
+        Already registered? <a href="/login" style="color:white;">Login</a>
+    </div>
+</div>
 
 </body>
 </html>
