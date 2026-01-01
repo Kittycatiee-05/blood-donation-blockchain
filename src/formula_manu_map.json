@@ -1,0 +1,23 @@
+{
+  "0x8b4c198c33edb993ff79b4accbf460345e39d136": {
+    "NH4": "AA-M",
+    "H2SO4": "AA-M-2",
+    "NO2": "AA-M-3",
+    "H2SHS": "AA-M-4",
+    "N2O": "AA-M-5",
+    "O2": "AA-M-6",
+    "SO2": "AA-M-7",
+    "CO2": "BB-M3"
+  },
+  "0x8b4c198c33edb993ff79b4accbf460345e39d136|NH4": "AA-M",
+  "0x8b4c198c33edb993ff79b4accbf460345e39d136|H2SO4": "AA-M",
+  "0x8b4c198c33edb993ff79b4accbf460345e39d136|NO2": "AA-M",
+  "0x8b4c198c33edb993ff79b4accbf460345e39d136|H2SHS": "AA-M",
+  "0x8b4c198c33edb993ff79b4accbf460345e39d136|N2O": "AA-M",
+  "0x8b4c198c33edb993ff79b4accbf460345e39d136|O2": "AA-M",
+  "0x8b4c198c33edb993ff79b4accbf460345e39d136|SO2": "AA-M",
+  "0x8b4c198c33edb993ff79b4accbf460345e39d136|CO2": "AA-M2",
+  "0x8b4c198c33edb993ff79b4accbf460345e39d136|CO": "BB-L",
+  "0x8b4c198c33edb993ff79b4accbf460345e39d136|MO": "BB-M",
+  "0x8b4c198c33edb993ff79b4accbf460345e39d136|IO": "BB-WM"
+}

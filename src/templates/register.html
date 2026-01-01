@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body style="font-family: Arial; background:#f4f6f8;">
+
+<h2 style="text-align:center;">User Registration</h2>
+
+<form method="post" action="/register"
+      style="width:300px; margin:auto; padding:20px; background:white; border-radius:8px;">
+
+  <label>Username</label><br>
+  <input type="text" name="username" placeholder="Enter username" required><br><br>
+
+  <label>Password</label><br>
+  <input type="password" name="password" placeholder="Enter password" required><br><br>
+
+  <label>Role</label><br>
+  <select name="role" required>
+    <option value="">-- Select Role --</option>
+    <option value="donor">Donor</option>
+    <option value="hospital">Hospital</option>
+    <option value="lab">Lab Authority</option>
+    <option value="bloodbank">Blood Bank</option>
+    <option value="health">Health Authority</option>
+    <option value="patient">Patient</option>
+  </select><br><br>
+
+  <button type="submit" style="width:100%; padding:8px; background:#007bff; color:white; border:none;">
+    Register
+  </button>
+</form>
+
+<p style="text-align:center;">
+  Already registered? <a href="/login">Login</a>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+[
+    {
+        "guid": "a9d870f76fccd2b112bb90b397598c76c2f230c81c317744e3e621e679124f1f",
+        "password": 1111,
+        "role": 1,
+        "name": "Nano Innovation Labs",
+        "address": "0x2ADAa1E77A6A5eC0CCbF520C33338Ba5D1C2c677"
+    },
+    {
+        "guid": "d167e424896509218b3ff9e05036aaa57a2acbef6a2b6c37f9b6f7660e273758",
+        "password": 1223,
+        "role": 2,
+        "name": "Schemia Manufacture",
+        "address": "0x2ADAa1E77A6A5eC0CCbF520C33338Ba5D1C2c677"
+    },
+    {
+        "guid": "c8933b3fcd21af3d4952f3f0fb6a43350bffc311e9bbe5d0b1804d68b4b4ef61",
+        "password": 2222,
+        "role": 3,
+        "name": "Med Distribution",
+        "address": "0x2ADAa1E77A6A5eC0CCbF520C33338Ba5D1C2c677"
+    },
+    {
+        "guid": "70f670e3c6fc960ba971616494fc2cbffc39b4416546f9f9acf39bad961bddf9",
+        "password": 1155,
+        "role": 5,
+        "name": "Pharma Transit",
+        "address": "0x2ADAa1E77A6A5eC0CCbF520C33338Ba5D1C2c677"
+    },
+    {
+        "guid": "a467139ca8b69923463c93389abb76eea994ce66719943e2944256ca8ac20f38",
+        "password": 2255,
+        "role": 4,
+        "name": "Swift Transit",
+        "address": "0x2ADAa1E77A6A5eC0CCbF520C33338Ba5D1C2c677"
+    },
+    {
+        "guid": "ac7bc17ae3fedd931d7f1470e69305f8bc32fdd630dcef35b22c4ce68d68cb27",
+        "password": 1188,
+        "role": 6,
+        "name": "Life Line",
+        "address": "0x2ADAa1E77A6A5eC0CCbF520C33338Ba5D1C2c677"
+    },
+    {
+        "guid": "1f61cccfbf6b70f27e7354adae683fe42c1f4e31057c4301cc4c375e968b2db8",
+        "password": 9898,
+        "role": 7,
+        "name": "Vitality Vault",
+        "address": "0x2ADAa1E77A6A5eC0CCbF520C33338Ba5D1C2c677"
+    },
+    {
+        "guid": "684aa81286f3a0e80415025db42b854aaa37840738d4eee4a27f37f53c0d4fa8",
+        "password": 7744,
+        "role": 8,
+        "name": "Mridula Gopal",
+        "address": "0x2ADAa1E77A6A5eC0CCbF520C33338Ba5D1C2c677"
+    }
+]

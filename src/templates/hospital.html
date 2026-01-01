@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Dashboard</title>
+</head>
+
+<body style="font-family:Arial; background:#eef3f6;">
+
+<h2>Hospital Dashboard</h2>
+
+<!-- Tabs -->
+<div style="background:#ddd; padding:10px;">
+    <a href="#lab">Assign to Lab</a> |
+    <a href="#accept">Accept / Reject</a> |
+    <a href="#appointment">Appointment</a> |
+    <a href="#bank">Send to Blood Bank</a>
+</div>
+
+<hr>
+
+<!-- TAB 1 -->
+<h3 id="lab">Assign Donor to Lab</h3>
+<form>
+    Donor ID:<br><input type="text"><br>
+    Lab Name:<br><input type="text"><br><br>
+    <button>Assign</button>
+</form>
+
+<hr>
+
+<!-- TAB 2 -->
+<h3 id="accept">Accept / Reject Donor</h3>
+<form>
+    Donor ID:<br><input type="text"><br>
+    Decision:
+    <select>
+        <option>Accept</option>
+        <option>Reject</option>
+    </select><br><br>
+    <button>Submit</button>
+</form>
+
+<hr>
+
+<!-- TAB 3 -->
+<h3 id="appointment">Assign Donation Appointment</h3>
+<form>
+    Donor ID:<br><input type="text"><br>
+    Date & Time:<br><input type="datetime-local"><br><br>
+    <button>Assign</button>
+</form>
+
+<hr>
+
+<!-- TAB 4 -->
+<h3 id="bank">Send Blood to Blood Bank</h3>
+<form>
+    Blood ID:<br><input type="text"><br><br>
+    <button>Send</button>
+</form>
+<a href="/logout">Logout</a>
+
+</body>
+</html>

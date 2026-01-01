@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Lots</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='Favicon.png') }}">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="bg-gray-800 text-white p-4 shadow-md">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a class="text-2xl font-bold" href="#">Drug Traceability Demo</a>
+            <ul class="flex space-x-4 text-lg">
+                <li><a href="/manudashboard" class="hover:text-blue-400">Dashboard</a></li>
+                <li><a href="/createlot" class="text-blue-400 font-semibold">Create Lots</a></li>
+                <li><a href="/viewlots" class="hover:text-blue-400">View Lots</a></li>
+                <li><a href="/allocatewarehousem" class="hover:text-blue-400">Allocate to Warehouse M</a></li>
+                <li><a href="/viewWarehousem" class="hover:text-blue-400">View Warehouses</a></li>
+                <li><a href="/logout" class="hover:text-blue-400">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-lg">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Manufacturers Dashboard</h2>
+            <h3 class="text-xl font-semibold text-center text-purple-700 mb-6">Create lots from production lines</h3>
+            <form action="/createlotform" method="POST" class="space-y-4">
+                <div>
+                    <label for="lotid" class="block text-sm font-medium text-gray-700">Enter Lot id</label>
+                    <input type="number" id="lotid" name="lotid" placeholder="Enter Lot id" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="lotpillcount" class="block text-sm font-medium text-gray-700">How many pills are there in this lot:</label>
+                    <input type="number" id="lotpillcount" name="lotpillcount" placeholder="Enter lot pill count to export" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="lotlabform" class="block text-sm font-medium text-gray-700">Select the drug formula of the lot:</label>
+                    <select id="lotlabform" name="lotlabform" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        {% for i in range(0, len1) %}
+                        <option>{{ dashboard_data1[i][0] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="pt-4">
+                    <button type="submit"
+                        class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Create Lot
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

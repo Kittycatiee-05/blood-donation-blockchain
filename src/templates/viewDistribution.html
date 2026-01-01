@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Distribution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='Favicon.png') }}">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="bg-gray-800 text-white p-4 shadow-md">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a class="text-2xl font-bold" href="#">Drug Traceability Demo</a>
+            <ul class="flex space-x-4 text-lg">
+                <li><a href="/waretdashboard" class="hover:text-blue-400">Dashboard</a></li>
+                <li><a href="/distributeHospitals" class="hover:text-blue-400">Distribute to Hospitals</a></li>
+                <li><a href="/distributeRetailers" class="hover:text-blue-400">Distribute to Retailers</a></li>
+                <li><a href="/viewDistribution" class="text-blue-400 font-semibold">View Distribution</a></li>
+                <li><a href="/logout" class="hover:text-blue-400">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-5xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Warehouse T Dashboard</h2>
+            <h3 class="text-xl font-semibold text-center text-purple-700 mb-6">Received Lots for Distribution</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100 border-b border-gray-200">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Distributed to</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Medicine Name</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Distributed Count</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        {% for i in range(0, len) %}
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ dashboard_data[i][0] }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ dashboard_data[i][1] }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ dashboard_data[i][2] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
